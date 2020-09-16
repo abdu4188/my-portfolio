@@ -29,20 +29,20 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style>
 .social-wrapper {
   display: flex;
   width: 30vw;
 }
-::v-deep .v-btn .v-icon {
-  font-size: 2rem;
-  color: white;
+.v-btn .v-icon {
+  font-size: 2rem !important;
+  color: white !important;
 }
-::v-deep .v-btn .v-icon:hover {
-  font-size: 2rem;
-  color: greenyellow;
+.v-btn .v-icon:hover {
+  font-size: 2rem !important;
+  color: greenyellow !important;
 }
-::v-deep .v-btn {
+.v-btn {
   margin-right: 1vw;
 }
 </style>

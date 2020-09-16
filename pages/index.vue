@@ -43,19 +43,19 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" >
 .wrapper {
   width: 70vw;
 }
-::v-deep .vue-typer .custom.char {
+.vue-typer .custom.char {
   font-family: monospace;
   color: white;
   font-size: 3.5rem;
 }
-::v-deep .vue-typer .custom.caret {
+.vue-typer .custom.caret {
   background-color: white;
 }
-::v-deep .second-text .custom.char {
+.second-text .custom.char {
   color: white;
   font-size: 2rem !important;
 }
