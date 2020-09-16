@@ -1,73 +1,73 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">
-        my-portfolio
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
+  <div class="wrapper container text-center">
+    <Rocket />
+    <vue-typer
+      :text="texts1"
+      :repeat="0"
+      :type-delay="100"
+      :erase-on-complete="false"
+    />
+    <br>
+    <vue-typer
+      :pre-type-delay="3000"
+      :text="texts2"
+      :repeat="0"
+      :type-delay="100"
+      :erase-on-complete="false"
+      class="second-text"
+    />
   </div>
 </template>
 
 <script>
-export default {}
+import Rocket from '@/components/Rocket'
+
+export default {
+  components: {
+    Rocket
+  },
+  data () {
+    return {
+      texts1: [
+        'Hello, My name is Abdulaziz'
+      ],
+      texts2: [
+        'I create websites and apps.'
+      ]
+    }
+  },
+  methods: {}
+}
 </script>
 
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+<style lang="scss" scoped>
+.wrapper {
+  width: 70vw;
 }
-
-.title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
+::v-deep .vue-typer .custom.char {
+  font-family: monospace;
+  color: white;
+  font-size: 4rem;
 }
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
+::v-deep .vue-typer .custom.caret {
+  background-color: white;
 }
-
-.links {
-  padding-top: 15px;
+::v-deep .second-text .custom.char {
+  color: white;
+  font-size: 2rem !important;
+}
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .wrapper {
+      width: 80vw;
+    }
+    ::v-deep .vue-typer .custom.char {
+      font-size: 3rem;
+    }
+    ::v-deep .second-text .custom.char {
+      font-size: 2rem !important;
+    }
 }
 </style>
