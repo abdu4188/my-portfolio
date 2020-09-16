@@ -16,15 +16,18 @@
       :erase-on-complete="false"
       class="second-text"
     />
+    <Socials />
   </div>
 </template>
 
 <script>
 import Rocket from '@/components/Rocket'
+import Socials from '@/components/Socials'
 
 export default {
   components: {
-    Rocket
+    Rocket,
+    Socials
   },
   data () {
     return {
@@ -47,7 +50,7 @@ export default {
 ::v-deep .vue-typer .custom.char {
   font-family: monospace;
   color: white;
-  font-size: 4rem;
+  font-size: 3.5rem;
 }
 ::v-deep .vue-typer .custom.caret {
   background-color: white;
