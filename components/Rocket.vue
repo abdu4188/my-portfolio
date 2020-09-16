@@ -1,5 +1,6 @@
 <template>
   <div class="svg-container">
+    // eslint-disable-next-line vue/no-v-html
     <div v-html="RocketSvg" />
   </div>
 </template>
