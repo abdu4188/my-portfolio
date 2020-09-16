@@ -66,11 +66,11 @@ export default {
     .wrapper {
       width: 80vw;
     }
-    ::v-deep .vue-typer .custom.char {
-      font-size: 3rem;
+    .vue-typer .custom.char {
+      font-size: 2rem;
     }
-    ::v-deep .second-text .custom.char {
-      font-size: 2rem !important;
+    .second-text .custom.char {
+      font-size: 1rem !important;
     }
 }
 </style>

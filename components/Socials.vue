@@ -33,6 +33,7 @@ export default {
 .social-wrapper {
   display: flex;
   width: 30vw;
+  margin-top: 10vh;
 }
 .v-btn .v-icon {
   font-size: 2rem !important;
