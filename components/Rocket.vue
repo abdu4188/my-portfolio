@@ -1,7 +1,8 @@
 <template>
   <div class="svg-container">
     // eslint-disable-next-line vue/no-v-html
-    <div v-html="RocketSvg" />
+    <!-- <div v-html="RocketSvg" /> -->
+    <img class="gif" style="border-radius: 25%" src="~/assets/g.gif" alt="">
   </div>
 </template>
 
@@ -22,103 +23,13 @@ export default {
   max-width: 400px;
   margin: 0 auto;
 }
-
-.clouds {
-  display: block;
-  -webkit-animation: verticalScroll 3s infinite ease-in;
-  -moz-animation: verticalScroll 3s infinite ease-in;
-  animation: verticalScroll 3s infinite ease-in;
-}
-
-#rocket {
-  -webkit-transform-origin: 50% 0;
-  transform-origin: 50% 0;
-  -webkit-animation: takeOff 3s infinite ease-in;
-  animation: takeOff 3s infinite ease-in;
-}
-
-.flame-outer {
-  -webkit-animation: outerFlame .5s infinite linear;
-  -moz-animation: outerFlame .5s infinite linear;
-  animation: outerFlame .5s infinite linear;
-}
-
-.flame-inner {
-  -webkit-animation: innerFlame .5s infinite linear;
-  -moz-animation: innerFlame .5s infinite linear;
-  -ms-animation: innerFlame .5s infinite linear;
-  animation: innerFlame .5s infinite linear;
-}
-@-webkit-keyframes verticalScroll {
-  0% { -webkit-transform: translateY(0) }
-  100% { -webkit-transform: translateY(500px) }
-}
-@-moz-keyframes verticalScroll {
-  0% { -moz-transform: translateY(0) }
-  100% { -moz-transform: translateY(500px) }
-}
-@keyframes verticalScroll {
-  0% { transform: translateY(0) }
-  100% { transform: translateY(500px) }
-}
-
-@-webkit-keyframes takeOff {
-  0% { -webkit-transform: scale(1) translateY(0); }
-  100% { -webkit-transform: scale(0) translateY(-500px); }
-}
-@-moz-keyframes takeOff {
-  0% {
-    -moz-transform: scale(1) translateY(0); }
-  100% {-moz-transform: scale(0) translateY(-500px); }
-}
-@keyframes takeOff {
-  0% {
-    transform: scale(1) translateY(0);
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .gif {
+      width: 90vw;
+      margin-left: -16vw;
+    }
   }
-  100% {
-    transform: scale(0) translateY(-500px); }
-}
-
-@-webkit-keyframes outerFlame {
-  0% { fill: red}
-  33% { fill: orange  }
-  66% {fill: yellow }
-  75% { fill: orange}
-  100% {fill: red  }
-}
-@-moz-keyframes outerFlame {
-  0% { fill: red}
-  33% { fill: orange  }
-  66% {fill: yellow }
-  75% { fill: orange}
-  100% {fill: red  }
-}
-@keyframes outerFlame {
-  0% { fill: red}
-  33% { fill: orange  }
-  66% {fill: yellow }
-  75% { fill: orange}
-  100% {fill: red  }
-}
-
-@-webkit-keyframes innerFlame {
-  0% { fill: orange}
-  33% { fill: yellow  }
-  66% {fill: orange }
-  100% {fill: red  }
-}
-
-@-moz-keyframes innerFlame {
-  0% { fill: orange}
-  33% { fill: yellow  }
-  66% {fill: orange }
-  100% {fill: red  }
-}
-
-@keyframes innerFlame {
-  0% { fill: orange}
-  33% { fill: yellow  }
-  66% {fill: orange }
-  100% {fill: red  }
-}
 </style>
